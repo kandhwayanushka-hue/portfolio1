@@ -1,0 +1,9 @@
+{
+  "short_name": "Anushka Portfolio",
+  "name": "Anushka Kandhway — Full-Stack Developer",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#FDFBF7",
+  "background_color": "#FDFBF7"
+}

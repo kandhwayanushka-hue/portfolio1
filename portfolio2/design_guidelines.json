@@ -1,0 +1,79 @@
+{
+  "theme_and_archetype": {
+    "domain": "Portfolio, Personal Brand",
+    "theme": "Light",
+    "archetype": "6 (Vibrant Play) blended with Neo-Brutalist Pixel Retro",
+    "mood": "Playful, colorful, nostalgic yet clean and modern (Seth Lukin inspired)"
+  },
+  "colors": {
+    "background": "#FDFBF7",
+    "surface": "#FFFFFF",
+    "primary": "#FF3B30",
+    "secondary": "#007AFF",
+    "accent": "#FFCC00",
+    "text_main": "#0A0A0A",
+    "text_muted": "#555555",
+    "border": "#0A0A0A",
+    "pixel_pink": "#FF66B2",
+    "pixel_green": "#00CC66"
+  },
+  "typography": {
+    "heading_font": "Outfit",
+    "accent_font": "VT323",
+    "body_font": "DM Sans",
+    "font_imports": [
+      "@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&family=VT323&display=swap');"
+    ],
+    "scale": {
+      "h1": "text-5xl md:text-6xl lg:text-[5rem] tracking-tighter font-black leading-none",
+      "h2": "text-4xl md:text-5xl tracking-tight font-bold",
+      "h3": "text-2xl md:text-3xl font-semibold",
+      "body": "text-base md:text-lg leading-relaxed",
+      "pixel_accent": "text-sm md:text-base font-['VT323'] uppercase tracking-widest"
+    }
+  },
+  "spacing_and_layout": {
+    "section_padding": "py-20 md:py-32 px-6 md:px-12",
+    "grid_system": "Bento grid for case studies (e.g., grid-cols-1 md:grid-cols-12 gap-6 or gap-8). Focus on asymmetry.",
+    "container_max_width": "max-w-6xl mx-auto",
+    "alignment": "Optical alignment, chunky spacing, generous negative space."
+  },
+  "visual_style": {
+    "borders": "border-2 or border-[3px] border-[#0A0A0A] for a chunky, retro brutalist feel.",
+    "shadows": "Hard drop shadows: shadow-[4px_4px_0px_0px_rgba(10,10,10,1)] or shadow-[8px_8px_0px_0px_rgba(10,10,10,1)]",
+    "radii": "rounded-2xl for main containers, mixed with sharp pixel art decorations.",
+    "decorations": "Use inline SVG pixel sparkles/stars scattered around the hero and stats sections."
+  },
+  "components_instructions": {
+    "hero": "Massive 'LET'S BUILD TOGETHER' heading in Outfit font. Include status badges (Location, Local Time, Status) using VT323 pixel font, rounded borders, and hard black outlines.",
+    "intro_section": "Big text 'YOUR NAME', role tags in colorful pill-shapes with hard shadows. Mission statement paragraph in large body font.",
+    "marquee": "Use react-fast-marquee or CSS marquee. Massive outline text or bright colored background with black text. Separate items with ✦ pixel star.",
+    "case_study_cards": "Bento-style layout for 3 projects. Images in the top portion, bottom portion for title and tags. Hard black outer borders, solid white background, hard black offset shadow on hover.",
+    "stats_block": "Stat block with pixel sparkle decorations and a playful layout.",
+    "contact_section_and_modal": "Contact section with email, LinkedIn, GitHub and a 'Start a Project' CTA button. CTA opens a Shadcn Dialog modal with a form that saves to MongoDB.",
+    "cursor": "Implement a custom playful cursor using framer-motion (e.g., a colored circle that follows the mouse with slight spring lag), hide default cursor on desktop.",
+    "footer": "Chunky footer with large display text and social links. Contrasting background color."
+  },
+  "motion_and_interaction": {
+    "hover_states": "Interactive elements should move up and left (-translate-y-1 -translate-x-1) and increase their hard shadow.",
+    "page_transitions": "Subtle fade-in and slide-up for sections on mount.",
+    "microinteractions": "Bouncy spring animations on buttons and cards using framer-motion (type: 'spring', stiffness: 300, damping: 20)."
+  },
+  "media": {
+    "case_study_1": {
+      "url": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200&q=85",
+      "description": "Colorful laptop workspace for Portfolio project"
+    },
+    "case_study_2": {
+      "url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=85",
+      "description": "Futuristic AI chip for 60 Days to AI project"
+    },
+    "case_study_3": {
+      "url": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=85",
+      "description": "Laptop with code for Projects Personal"
+    }
+  },
+  "testing_requirements": {
+    "attributes": "All interactive elements and key informational areas MUST include a 'data-testid' attribute in kebab-case based on role."
+  }
+}
