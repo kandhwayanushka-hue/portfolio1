@@ -15,6 +15,7 @@ export default function Footer() {
             <div className="flex flex-col gap-2 font-display text-lg">
               <a href="https://www.instagram.com/kandhwayanushka" target="_blank" rel="noreferrer" className="underline underline-offset-4" data-testid="footer-instagram">Instagram</a>
               <a href="https://x.com/KandhwayAn87764" target="_blank" rel="noreferrer" className="underline underline-offset-4" data-testid="footer-twitter">Twitter / X</a>
+              <a href="https://www.youtube.com/@BelieveeToAchievee" target="_blank" rel="noreferrer" className="underline underline-offset-4" data-testid="footer-youtube">YouTube</a>
             </div>
           </div>
           <div>

@@ -22,7 +22,7 @@ export default function ContactSection({ onStartProject }) {
           <PixelArrow size={22} color="#fff" />
         </button>
 
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
           <a href="https://www.instagram.com/kandhwayanushka" target="_blank" rel="noreferrer" data-testid="contact-instagram-link" className="brutal brutal-lift rounded-2xl px-6 py-5 bg-[var(--pixel-pink)] text-left flex items-center justify-between gap-4">
             <div>
               <div className="font-pixel uppercase text-xs">Instagram</div>
@@ -43,6 +43,13 @@ export default function ContactSection({ onStartProject }) {
               <div className="font-display font-bold text-lg md:text-xl mt-1">@KandhwayAn87764</div>
             </div>
             <PixelArrow size={22} color="#fff" />
+          </a>
+          <a href="https://www.youtube.com/@BelieveeToAchievee" target="_blank" rel="noreferrer" data-testid="contact-youtube-link" className="brutal brutal-lift rounded-2xl px-6 py-5 bg-white text-left flex items-center justify-between gap-4">
+            <div>
+              <div className="font-pixel uppercase text-xs text-[var(--text-muted)]">YouTube</div>
+              <div className="font-display font-bold text-lg md:text-xl mt-1">@BelieveeToAchievee</div>
+            </div>
+            <PixelArrow size={22} />
           </a>
         </div>
       </div>
