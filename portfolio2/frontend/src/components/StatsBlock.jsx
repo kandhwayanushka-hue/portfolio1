@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { PixelStar, PixelHeart } from "./PixelSparkle";
 
 const STATS = [
-  { value: "5+", label: "Years designing" },
-  { value: "30+", label: "Projects shipped" },
-  { value: "12", label: "Clients & teams" },
-  { value: "∞", label: "Cups of coffee" },
+  { value: "~1", label: "Year coding" },
+  { value: "20+", label: "Repos on GitHub" },
+  { value: "B.Tech", label: "CSE (Data Science)" },
+  { value: "∞", label: "Curiosity" },
 ];
 
 export default function StatsBlock() {
