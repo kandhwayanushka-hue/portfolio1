@@ -23,10 +23,10 @@ export default function ContactSection({ onStartProject }) {
         </button>
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-          <a href="mailto:anushkakandhway@gmail.com" data-testid="contact-email-link" className="brutal brutal-lift rounded-2xl px-6 py-5 bg-white text-left flex items-center justify-between gap-4">
+          <a href="https://www.instagram.com/kandhwayanushka" target="_blank" rel="noreferrer" data-testid="contact-instagram-link" className="brutal brutal-lift rounded-2xl px-6 py-5 bg-[var(--pixel-pink)] text-left flex items-center justify-between gap-4">
             <div>
-              <div className="font-pixel uppercase text-xs text-[var(--text-muted)]">Email</div>
-              <div className="font-display font-bold text-lg md:text-xl mt-1 break-all">anushkakandhway@gmail.com</div>
+              <div className="font-pixel uppercase text-xs">Instagram</div>
+              <div className="font-display font-bold text-lg md:text-xl mt-1">@kandhwayanushka</div>
             </div>
             <PixelArrow size={22} />
           </a>
@@ -37,12 +37,12 @@ export default function ContactSection({ onStartProject }) {
             </div>
             <PixelArrow size={22} />
           </a>
-          <a href="https://github.com/kandhwayanushka-hue" target="_blank" rel="noreferrer" data-testid="contact-github-link" className="brutal brutal-lift rounded-2xl px-6 py-5 bg-[var(--pixel-pink)] text-left flex items-center justify-between gap-4">
+          <a href="https://x.com/KandhwayAn87764" target="_blank" rel="noreferrer" data-testid="contact-twitter-link" className="brutal brutal-lift rounded-2xl px-6 py-5 bg-[var(--secondary)] text-white text-left flex items-center justify-between gap-4">
             <div>
-              <div className="font-pixel uppercase text-xs">GitHub</div>
-              <div className="font-display font-bold text-lg md:text-xl mt-1">@kandhwayanushka-hue</div>
+              <div className="font-pixel uppercase text-xs">Twitter / X</div>
+              <div className="font-display font-bold text-lg md:text-xl mt-1">@KandhwayAn87764</div>
             </div>
-            <PixelArrow size={22} />
+            <PixelArrow size={22} color="#fff" />
           </a>
         </div>
       </div>

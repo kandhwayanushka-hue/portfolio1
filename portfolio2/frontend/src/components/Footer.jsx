@@ -11,8 +11,11 @@ export default function Footer() {
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-white/20 pt-8">
           <div>
-            <p className="font-pixel uppercase text-xs text-white/60 mb-2">Email</p>
-            <a href="mailto:anushkakandhway@gmail.com" className="font-display text-lg underline underline-offset-4" data-testid="footer-email">anushkakandhway@gmail.com</a>
+            <p className="font-pixel uppercase text-xs text-white/60 mb-2">Social</p>
+            <div className="flex flex-col gap-2 font-display text-lg">
+              <a href="https://www.instagram.com/kandhwayanushka" target="_blank" rel="noreferrer" className="underline underline-offset-4" data-testid="footer-instagram">Instagram</a>
+              <a href="https://x.com/KandhwayAn87764" target="_blank" rel="noreferrer" className="underline underline-offset-4" data-testid="footer-twitter">Twitter / X</a>
+            </div>
           </div>
           <div>
             <p className="font-pixel uppercase text-xs text-white/60 mb-2">Elsewhere</p>
