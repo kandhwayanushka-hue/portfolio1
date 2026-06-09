@@ -1,4 +1,4 @@
-import { PixelArrow, PixelStar } from "@/components/PixelSparkle";
+import { PixelArrow, PixelStar } from "./PixelSparkle";
 
 export default function ContactSection({ onStartProject }) {
   return (

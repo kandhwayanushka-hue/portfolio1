@@ -1,4 +1,4 @@
-import { PixelHeart } from "@/components/PixelSparkle";
+import { PixelHeart } from "./PixelSparkle";
 
 export default function Footer() {
   const year = new Date().getFullYear();

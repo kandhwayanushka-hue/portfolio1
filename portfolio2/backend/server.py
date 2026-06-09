@@ -14,9 +14,17 @@ from datetime import datetime, timezone
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
-mongo_url = os.environ['MONGO_URL']
-client = AsyncIOMotorClient(mongo_url)
-db = client[os.environ['DB_NAME']]
+# MongoDB — optional; falls back to in-memory storage if unavailable
+mongo_url = os.environ.get('MONGO_URL', '')
+USE_MONGO = bool(mongo_url)
+if USE_MONGO:
+    client = AsyncIOMotorClient(mongo_url)
+    db = client[os.environ.get('DB_NAME', 'portfolio')]
+    contact_collection = db.contact_submissions
+else:
+    client = None
+    db = None
+    contact_collection = None
 
 app = FastAPI()
 api_router = APIRouter(prefix="/api")
@@ -140,21 +148,30 @@ async def get_project(slug: str):
         raise HTTPException(status_code=404, detail="Project not found")
     return project
 
+# In-memory fallback when MongoDB is not configured
+_in_memory_contacts: list[dict] = []
+
 @api_router.post("/contact", response_model=ContactSubmission)
 async def create_contact(payload: ContactSubmissionCreate):
     submission = ContactSubmission(**payload.model_dump())
     doc = submission.model_dump()
     doc["timestamp"] = doc["timestamp"].isoformat()
-    await db.contact_submissions.insert_one(doc)
+    if USE_MONGO and contact_collection is not None:
+        await contact_collection.insert_one(doc)
+    else:
+        _in_memory_contacts.append(doc)
     return submission
 
 @api_router.get("/contact", response_model=List[ContactSubmission])
 async def list_contacts():
-    docs = await db.contact_submissions.find({}, {"_id": 0}).sort("timestamp", -1).to_list(500)
-    for d in docs:
-        if isinstance(d.get("timestamp"), str):
-            d["timestamp"] = datetime.fromisoformat(d["timestamp"])
-    return docs
+    if USE_MONGO and contact_collection is not None:
+        docs = await contact_collection.find({}, {"_id": 0}).sort("timestamp", -1).to_list(500)
+        for d in docs:
+            if isinstance(d.get("timestamp"), str):
+                d["timestamp"] = datetime.fromisoformat(d["timestamp"])
+        return docs
+    # In-memory fallback
+    return sorted(_in_memory_contacts, key=lambda x: x.get("timestamp", ""), reverse=True)
 
 
 app.include_router(api_router)
@@ -175,4 +192,5 @@ logger = logging.getLogger(__name__)
 
 @app.on_event("shutdown")
 async def shutdown_db_client():
-    client.close()
+    if client:
+        client.close()

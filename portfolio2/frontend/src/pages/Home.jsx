@@ -1,12 +1,12 @@
 import { useState } from "react";
-import Hero from "@/components/Hero";
-import IntroSection from "@/components/IntroSection";
-import FeaturedWork from "@/components/FeaturedWork";
-import SkillsMarquee, { PixelMarquee } from "@/components/Marquee";
-import StatsBlock from "@/components/StatsBlock";
-import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
-import ContactModal from "@/components/ContactModal";
+import Hero from "../components/Hero";
+import IntroSection from "../components/IntroSection";
+import FeaturedWork from "../components/FeaturedWork";
+import SkillsMarquee, { PixelMarquee } from "../components/Marquee";
+import StatsBlock from "../components/StatsBlock";
+import ContactSection from "../components/ContactSection";
+import Footer from "../components/Footer";
+import ContactModal from "../components/ContactModal";
 
 export default function Home() {
   const [open, setOpen] = useState(false);

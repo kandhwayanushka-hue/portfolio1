@@ -1,9 +1,9 @@
-import "@/App.css";
+import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "sonner";
-import Home from "@/pages/Home";
-import CaseStudy from "@/pages/CaseStudy";
-import CustomCursor from "@/components/CustomCursor";
+import Home from "./pages/Home";
+import CaseStudy from "./pages/CaseStudy";
+import CustomCursor from "./components/CustomCursor";
 
 function App() {
   return (

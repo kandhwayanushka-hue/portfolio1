@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { toast } from "sonner";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { api } from "@/lib/api";
-import { PixelStar } from "@/components/PixelSparkle";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "./ui/dialog";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import { Label } from "./ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { api } from "../lib/api";
+import { PixelStar } from "./PixelSparkle";
 
 const PROJECT_TYPES = ["Web Design", "Mobile App", "Branding", "Design System", "Motion", "Other"];
 const BUDGETS = ["< $5k", "$5k – $15k", "$15k – $40k", "$40k+", "Let's discuss"];

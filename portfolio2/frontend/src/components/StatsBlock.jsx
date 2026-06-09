@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { PixelStar, PixelHeart } from "@/components/PixelSparkle";
+import { PixelStar, PixelHeart } from "./PixelSparkle";
 
 const STATS = [
   { value: "5+", label: "Years designing" },

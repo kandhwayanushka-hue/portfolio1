@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { api } from "@/lib/api";
-import { PixelArrow, PixelStar } from "@/components/PixelSparkle";
-import Footer from "@/components/Footer";
+import { api } from "../lib/api";
+import { PixelArrow, PixelStar } from "../components/PixelSparkle";
+import Footer from "../components/Footer";
 
 export default function CaseStudy() {
   const { slug } = useParams();

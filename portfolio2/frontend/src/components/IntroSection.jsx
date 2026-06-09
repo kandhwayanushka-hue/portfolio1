@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { PixelStar } from "@/components/PixelSparkle";
+import { PixelStar } from "./PixelSparkle";
 
 const ROLE_TAGS = [
   { label: "REACT", bg: "#FF3B30", fg: "#fff" },

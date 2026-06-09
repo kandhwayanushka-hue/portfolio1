@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { PixelStar, PixelArrow } from "@/components/PixelSparkle";
+import { PixelStar, PixelArrow } from "./PixelSparkle";
 
 const fmt = (n) => n.toString().padStart(2, "0");
 

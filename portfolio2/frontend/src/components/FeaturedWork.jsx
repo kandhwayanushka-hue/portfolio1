@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { api } from "@/lib/api";
-import { PixelArrow, PixelStar } from "@/components/PixelSparkle";
+import { api } from "../lib/api";
+import { PixelArrow, PixelStar } from "./PixelSparkle";
 
 export default function FeaturedWork() {
   const [projects, setProjects] = useState([]);

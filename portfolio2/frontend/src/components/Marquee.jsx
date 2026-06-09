@@ -1,4 +1,4 @@
-import { PixelArrow, PixelStar } from "@/components/PixelSparkle";
+import { PixelArrow, PixelStar } from "./PixelSparkle";
 
 const SKILLS = [
   "React", "JavaScript", "Tailwind CSS", "HTML / CSS", "Bootstrap",
