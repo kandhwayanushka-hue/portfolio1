@@ -41,7 +41,7 @@ export default function CaseStudy() {
       <header className="px-6 md:px-12 py-16 md:py-24 border-b-[3px] border-[var(--ink)]" style={{ background: project.accent_color }}>
         <div className="max-w-6xl mx-auto">
           <p className="font-pixel uppercase text-sm mb-4">✦ {project.role} · {project.year}</p>
-          <h1 className="font-display font-black text-7xl md:text-[9rem] leading-[0.85] tracking-tighter" data-testid="case-study-title">
+          <h1 className="font-display font-black text-5xl md:text-[6rem] leading-[0.85] tracking-tighter" data-testid="case-study-title">
             {project.title}
             <span className="inline-block ml-3 align-middle"><PixelStar size={48} color="#0A0A0A" className="animate-spin-slow inline-block" /></span>
           </h1>

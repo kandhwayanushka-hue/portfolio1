@@ -101,6 +101,11 @@ html, body {
 }
 .animate-wobble { animation: wobble 2.4s ease-in-out infinite; }
 
+@keyframes fadePulse {
+    0%, 100% { opacity: 0.3; transform: translateX(-50%) translateY(0); }
+    50% { opacity: 0.7; transform: translateX(-50%) translateY(-4px); }
+}
+
 ::-webkit-scrollbar { width: 12px; height: 12px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb {

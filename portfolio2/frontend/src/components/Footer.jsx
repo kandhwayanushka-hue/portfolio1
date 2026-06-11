@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-[var(--ink)] text-[var(--bg)] px-6 md:px-12 py-16 border-t-[3px] border-[var(--ink)]" data-testid="site-footer">
       <div className="max-w-6xl mx-auto">
-        <h4 className="font-display font-black tracking-tighter leading-[0.85] text-[14vw] md:text-[8rem]">
+        <h4 className="font-display font-black tracking-tighter leading-[0.85] text-[14vw] md:text-[6rem]">
           ANUSHKA<span className="text-[var(--primary)]">.</span>
         </h4>
 

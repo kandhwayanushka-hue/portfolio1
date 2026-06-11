@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { PixelStar, PixelHeart } from "./PixelSparkle";
+import RevealText from "./RevealText";
 
 const STATS = [
   { value: "~1", label: "Year coding" },
@@ -17,9 +18,15 @@ export default function StatsBlock() {
 
       <div className="max-w-6xl mx-auto">
         <p className="font-pixel uppercase text-sm mb-3">✦ The numbers</p>
-        <h3 className="font-display font-black text-5xl md:text-7xl tracking-tighter leading-none">
+        <motion.h3
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: [0.17, 0.67, 0.29, 1.0] }}
+          className="font-display font-black text-5xl md:text-7xl tracking-tighter leading-none"
+        >
           A small <span className="italic font-light">but loud</span> body of work.
-        </h3>
+        </motion.h3>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-12">
           {STATS.map((s, i) => (

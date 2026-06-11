@@ -1,13 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { PixelStar } from "./PixelSparkle";
+import RevealText from "./RevealText";
 
 const ROLE_TAGS = [
   { label: "REACT", bg: "#FF3B30", fg: "#fff" },
   { label: "SPRING BOOT", bg: "#007AFF", fg: "#fff" },
   { label: "PYTHON", bg: "#FFCC00", fg: "#0A0A0A" },
   { label: "DATA SCIENCE", bg: "#FF66B2", fg: "#0A0A0A" },
-  { label: "FULL-STACK", bg: "#00CC66", fg: "#0A0A0A" },
+  { label: "C++", bg: "#00CC66", fg: "#0A0A0A" },
+  { label: "BOOTSTRAP", bg: "#8B5CF6", fg: "#fff" },
 ];
 
 export default function IntroSection() {
@@ -62,17 +64,30 @@ export default function IntroSection() {
               }} />
             </div>
 
-            <h2 className="relative font-display font-black tracking-tighter leading-[0.85] text-[18vw] lg:text-[10rem] py-2" data-testid="intro-name">
-              ANUSHKA
-              <br />
-              <span className="text-[var(--primary)]">KANDHWAY</span>
+            <motion.h2
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={{
+                hidden: {},
+                visible: { transition: { staggerChildren: 0.05, delayChildren: 0.1 } },
+              }}
+              className="relative font-display font-black tracking-tighter leading-[0.85] text-[14vw] lg:text-[8rem] py-2"
+              data-testid="intro-name"
+            >
+              <motion.span variants={{ hidden: { y: 40, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: [0.17, 0.67, 0.29, 1.0] } } }} className="block">
+                ANUSHKA
+              </motion.span>
+              <motion.span variants={{ hidden: { y: 40, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: [0.17, 0.67, 0.29, 1.0] } } }} className="block text-[var(--primary)] text-[10vw] lg:text-[6rem]">
+                KANDHWAY
+              </motion.span>
               <span className="inline-block ml-2 align-top">
                 <PixelStar size={48} color="#FFCC00" className="animate-spin-slow inline-block" />
               </span>
-            </h2>
+            </motion.h2>
           </div>
 
-          <p className="font-pixel text-xl md:text-2xl mt-6 uppercase">Full-Stack Developer</p>
+          <p className="font-pixel text-xl md:text-2xl mt-6 uppercase">Aspiring AI Research Scientist</p>
           <p className="font-pixel text-base md:text-lg text-[var(--text-muted)] uppercase mt-1">Based in Delhi, India · B.Tech CSE (Data Science)</p>
 
           <div className="flex flex-wrap gap-3 mt-8">
@@ -95,9 +110,17 @@ export default function IntroSection() {
 
         <div className="lg:col-span-5 lg:pt-32">
           <div className="brutal rounded-2xl p-7 bg-[var(--accent)]">
-            <p className="font-display text-2xl md:text-3xl leading-snug font-medium" data-testid="intro-mission">
-              Full-stack dev exploring the <em className="italic text-[var(--primary)]">edges</em> of what&apos;s possible. Every line of code is a lesson learned — I&apos;m learning every day and building along the way.
-            </p>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.7, ease: [0.17, 0.67, 0.29, 1.0] }}
+              className="font-display text-2xl md:text-3xl leading-snug font-medium" data-testid="intro-mission"
+            >
+              Exploring the {" "}
+              <em className="italic text-[var(--primary)]">frontiers</em>
+              {" "}of AI — turning curiosity into research, one model at a time. Learning every day and building toward something meaningful.
+            </motion.p>
           </div>
           <div className="mt-6 flex items-center gap-3 font-pixel uppercase text-sm">
             <span className="w-8 h-[3px] bg-[var(--ink)]" />
